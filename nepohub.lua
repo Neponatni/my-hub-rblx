@@ -4,7 +4,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local version = "1.0.0"
 
 local Window = Fluent:CreateWindow({
-    Title = "ClassicEvent",
+    Title = "Nepo Hub",
     SubTitle = "alpha version",
     TabWidth = 95,
     Size = UDim2.fromOffset(455, 299),
@@ -17,7 +17,7 @@ local Tabs = {
     Info = Window:AddTab({ Title = "Info", Icon = "info"}),
     Game = Window:AddTab({ Title = "Games", Icon = "home"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Hub = Window:AddTab({ Title = "Hub"}),
+    Hub = Window:AddTab({ Title = "Hub" }),
     BloxFruits = Window:AddTab({ Title = "Blox Fruits"}),
     MM2 = Window:AddTab({ Title = "Murder Mystery 2"})
 }
@@ -38,6 +38,8 @@ Tabs.MM2:AddButton({
      end
 })
 
+
+
 Window:SelectTab(1)
 Tabs.Info:AddParagraph({
     Title = "Neponatni",
@@ -48,6 +50,37 @@ Tabs.BloxFruits:AddButton({
      Title = "Mega Script",
      Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))("t.me/arceusxscripts") --subscribe
+     end
+})
+
+Tabs.Hub:AddButton({
+     Title = "Chat Bypasser",
+     Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))("t.me/arceusxscripts")
+     end
+})
+
+Tabs.Info:AddButton({
+     Title = "Telegram of Dev",
+     Callback = function()
+     setclipboard("https://t.me/nepohubdeveloper") 
+ Fluent:Notify({
+    Title = "Link",
+    Content = "Link successfully copied.",
+    Duration = 8
+})
+     end
+})
+
+Tabs.Info:AddButton({
+     Title = "Discord of Dev",
+     Callback = function()
+     setclipboard("https://discord.com/invite/3rCnszPYxU") 
+ Fluent:Notify({
+    Title = "Link",
+    Content = "Link successfully copied.",
+    Duration = 8
+})
      end
 })
 
