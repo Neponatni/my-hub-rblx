@@ -47,14 +47,14 @@ Tabs.Info:AddParagraph({
 })
 
 Tabs.BloxFruits:AddButton({
-     Title = "Mega Script",
+     Title = "Mega Script KEY SYSTEM",
      Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))("t.me/arceusxscripts") --subscribe
      end
 })
 
 Tabs.Hub:AddButton({
-     Title = "Chat Bypasser",
+     Title = "Chat Bypasser OLD CHAT ONLY",
      Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))("t.me/arceusxscripts")
      end
