@@ -14,12 +14,12 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-    Info = Window:AddTab({ Title = "Info", Icon = "info"}),
     Game = Window:AddTab({ Title = "Games", Icon = "home"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Hub = Window:AddTab({ Title = "Hub" }),
     BloxFruits = Window:AddTab({ Title = "Blox Fruits"}),
     MM2 = Window:AddTab({ Title = "Murder Mystery 2"})
+    KAT = Window:AddTab({ Title = "KAT" }),
 }
 
 
@@ -32,57 +32,42 @@ Fluent:Notify({
 -- functions
 
 Tabs.MM2:AddButton({
+    Title = "Anti-Stealer (use first)",
+    Callback = function()
+        getgenv().Hard = false -- set it to true if you want the hard version
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/ArrayField/main/Mm2AntiStealer"))()
+    end
+})
+
+
+Tabs.MM2:AddButton({
      Title = "Script 1",
      Callback = function()
      loadstring(game:HttpGet"https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2")("https://t.me/arceusxscripts")
      end
 })
 
-
-
-Window:SelectTab(1)
-Tabs.Info:AddParagraph({
-    Title = "Neponatni",
-    Content = "Hub. I FUCKING DELETED THE LUA FILE BEFORE THIS..."
+Tabs.KAT:AddButton({
+    Title = "Script 1"
+    Callback = function()
+    loadstring(Game:HttpGet("https://raw.githubusercontent.com/bybsa/kat/main/Script.lua"))()
+    end
 })
 
 Tabs.BloxFruits:AddButton({
-     Title = "Mega Script KEY SYSTEM",
+     Title = "Mega Script",
      Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))("t.me/arceusxscripts") --subscribe
      end
 })
 
 Tabs.Hub:AddButton({
-     Title = "Chat Bypasser OLD CHAT ONLY",
+     Title = "Chat Bypasser",
      Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))("t.me/arceusxscripts")
      end
 })
 
-Tabs.Info:AddButton({
-     Title = "Telegram of Dev",
-     Callback = function()
-     setclipboard("https://t.me/nepohubdeveloper") 
- Fluent:Notify({
-    Title = "Link",
-    Content = "Link successfully copied.",
-    Duration = 8
-})
-     end
-})
-
-Tabs.Info:AddButton({
-     Title = "Discord of Dev",
-     Callback = function()
-     setclipboard("https://discord.com/invite/3rCnszPYxU") 
- Fluent:Notify({
-    Title = "Link",
-    Content = "Link successfully copied.",
-    Duration = 8
-})
-     end
-})
 
 Tabs.Hub:AddButton({
      Title = "TweenTeleporter",
@@ -119,29 +104,46 @@ Tabs.Game:AddSlider("Slider", {
         end
 })
 
+--this dont work tbh
+
+local pisunchik=0
 Tabs.Game:AddSlider("Slider", {
         Title = "WalkSpeed",
         Description = "Changes Walkspeed",
         Default = 1,
-        Min = 17,
+        Min = 16,
         Max = 350,
         Rounding = 1,
         Callback = function(Value)
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+                pisunchik=Value
         end
 })
+coroutine.wrap(function()
+        while task.wait() do
+                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pisunchik
+        end
+end)()
 
+--sorry for the strings name im just bored okay?
+
+local anal=0
 Tabs.Game:AddSlider("Slider", {
         Title = "JumpHeight",
-        Description = "Changes JumpHeight",
+        Description = "Changes Jump Height",
         Default = 1,
         Min = 8,
-        Max = 150,
+        Max = 350,
         Rounding = 1,
         Callback = function(Value)
-            game.Players.LocalPlayer.Character.Humanoid.JumpHeight = (Value)
+                anal=Value
         end
 })
+coroutine.wrap(function()
+        while task.wait() do
+                game.Players.LocalPlayer.Character.Humanoid.JumpHeight = anal
+        end
+end)()
+        
 
 -- settings
 
