@@ -1,7 +1,7 @@
 --Script by holdok modified by neponatni--
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local version = "1.0.0"
+local version = "1.0.1"
 
 local Window = Fluent:CreateWindow({
     Title = "Nepo Hub",
