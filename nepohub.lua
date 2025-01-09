@@ -18,7 +18,7 @@ local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Hub = Window:AddTab({ Title = "Hub" }),
     BloxFruits = Window:AddTab({ Title = "Blox Fruits"}),
-    MM2 = Window:AddTab({ Title = "Murder Mystery 2"})
+    MM2 = Window:AddTab({ Title = "Murder Mystery 2"}),
     KAT = Window:AddTab({ Title = "KAT" }),
 }
 
